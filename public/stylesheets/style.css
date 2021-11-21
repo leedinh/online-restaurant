@@ -1,0 +1,190 @@
+.navbar-custom {
+    background-color: lightblue;
+}
+/* Modify brand and text color */
+ 
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: white;
+    font-size: 35px ;
+}
+#filter{
+    width: auto;
+    position: relative;
+    background-color: rgb(247, 245, 245);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+    /* arrow left and right */
+    #filter .arrow_img{
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    /* contain all filter category */
+    #category_container{
+      overflow: hidden;
+      gap: 20px;
+      width: auto;
+      display: flex;
+      margin: 0px 130px;
+      padding: 20px 0px;
+    }
+    .btn1{
+      border-radius: 20px;
+      background-color: white;  
+      border: none;
+    }
+    .btn1.active{
+      background-color: rgb(37, 37, 68);
+      color: white;
+    }
+.category{
+    border-radius: 20px;
+    width: 129px;           /* this width just fit 5 items, dont fix this*/
+    min-width: 129px;
+    height: 170px;
+    background-color: white;
+    position: relative;
+    text-align: center;
+  }
+.category.active{
+    background-color: rgb(37, 37, 68);
+    color: white;
+  }
+.category img{
+    padding-top: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+.category strong{
+    padding-top: 15px;
+    font-size: 15px;
+  }
+  #filter1{
+    width: auto;
+    position: relative;
+    background-color: rgb(247, 245, 245);
+    margin-top: -400px;
+
+  }
+
+  #order{
+    /* for javascript */
+
+    /* end */
+    position: sticky;
+    position: -webkit-sticky;
+    height: 70vh;
+    width: 60vw;
+    background-color: white;
+    top: 15%;
+    left: 20%;
+    z-index: 2;
+    border-radius: 20px;
+  }
+    /* header */
+    #order-head{
+      position: relative;
+      background-color: rgb(196, 196, 196);
+      font-size: 25px;
+      font-weight: 800;
+      padding: 5px 20px;
+      border-radius: 20px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+    #order-head > p{margin: 10px;}
+    #x-img{
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+    }
+  
+    /* product-detail */
+    #product-detail{
+      display: flex;
+      padding: 10px ;
+    }
+      /* img */
+      #img-detail{
+        width: 20%;  
+        margin: 0px 5%;
+      }
+        #img-detail > img{
+          width: 100%;
+          border: 2px solid black;
+          border-radius: 10px;
+        }
+      /* detail */
+      #detail{
+        width: 70%;
+        font-size: 15px;
+      }
+      
+        /* overview */
+        #overview{
+            display: flex;
+            padding: 0px 10px;
+        }
+          #overview > div :first-child{margin-top: 0px; font-size: 18px; font-weight: 700;}
+          #order-code{
+            flex: 1 0 20%;
+          }
+          #order-name{
+            flex: 1 0 60%;
+          }
+          #unit-price{
+            flex: 1 0 20%;
+          }
+            #unit-price > strong {font-size: 22px; color: red;} 
+  
+        /* quantity */
+        #quantity{
+          position: relative;
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
+          margin-bottom: 5px;
+          font-size: 20px;
+          font-weight: 700;
+        }
+          .number{
+            position: absolute;
+            right: 5px;
+            top: 10px;
+          }
+          .cqty-number{
+            width: 50px;
+          }
+        /* more detail */
+        #more-detail{
+          font-size: 14px;
+        }
+        /* add to the cart */
+        #add-cart{
+          padding: 10px; height: 42px;
+          background: rgb(245, 60, 4);
+          border: 1px solid black;
+          color: #fff;
+          font-weight: 700;
+          cursor: pointer;
+          margin: 5px;
+          width: 90%; 
+          border-radius: 20px; 
+          margin-top: 70px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+        }
+          #add-cart > img {
+            width: 40px;
+            height: 40px;
+          }
