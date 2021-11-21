@@ -21,6 +21,19 @@ router.get('/', function(req, res, next) {
     }).lean()
 });
 
+router.get('/search/:category', function(req, res, next) {
+    console.log(req.params.category)
+    Product.find({ category: req.params.category }, function(err, docs) {
+        chunksz = 3
+        chunks = []
+        for (var i = 0; i < docs.length; i += chunksz) {
+            chunks.push(docs.slice(i, i + chunksz))
+        }
+        console.log(chunks)
+        res.render('shop/index', { title: 'Shopping Cart', products: chunks })
+    }).lean()
+});
+
 router.get('/add-to-cart/:id', function(req, res, next) {
     var productId = req.params.id;
     var cart = new Cart(req.session.cart ? req.session.cart : {});
