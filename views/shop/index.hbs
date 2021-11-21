@@ -1,41 +1,40 @@
 <div class="row">
   
-    
             <div id = "filter">
           <img class="arrow_img" src = "">
           <img class="arrow_img" style="right: 0;" src = "">
           <div id="category_container"> 
             <button class="btn1 active">
               <div class="category active">
-                <img src="" alt="">
+                <img src="https://images.foody.vn/res/g67/662372/prof/s576x330/foody-upload-api-foody-mobile-4-jpg-180705093533.jpg" alt="">
                 <p><strong>All</strong></p>
               </div>
             </button>
          
           <button class = "btn1">
               <div class="category">
-                <img src="images/sea-food.png" alt="">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/18/3a/09/6c/bonefish-seafood-platter.jpg" alt="">
                 <p><strong>Sea food</strong></p>
               </div>
             </button>
 
             <button class = "btn1">
               <div class="category">
-                <img src="images/Meat.png" alt="">
+                <img src="https://image.freepik.com/free-photo/fresh-juicy-delicious-beef-steak-black-board-meat-dish-with-spices-herbs_73989-16584.jpg" alt="">
                 <p><strong>Meat</strong></p>
               </div>
             </button>
 
             <button class = "btn1">
               <div class="category">
-                <img src="images/Dumplings.png" alt="">
+                <img src="https://pasgo.vn/Upload/anh-chi-tiet/hoolong-dumpling-bar-le-van-luong-2-normal-934355538488.jpg" alt="">
                 <p><strong>Dumplings</strong></p>
               </div>
             </button>
 
             <button class = "btn1">
               <div class="category">
-                <img src="images/Noodle.png" alt="">
+                <img src="https://images.immediate.co.uk/production/volatile/sites/30/2021/05/Roast-broccoli-and-sesame-ramen-noodle-bowls-f57730e.jpg?quality=90&resize=556,505" alt="">
                 <p><strong>Noodle</strong></p>
               </div>         
             </button>
@@ -43,10 +42,14 @@
     </div>
 </div>
 
-<div id = "order">
+<div id = "order" class="hidden">
       <div id = "order-head">
         <p>ADD TO CART</p>
-        <img id="x-img" src = "images/x-icon.png">
+        
+        <button id="x-img" type="button"  aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        
       </div>
       <div id="product-detail">
         <div id = "img-detail">
@@ -84,7 +87,7 @@
       </div>
     </div>
 
-<div id = "filter1">
+<div id = "filter1" class="push">
 {{# each products }}
     <div class="row">
         {{# each this }}

@@ -71,13 +71,11 @@
     position: relative;
     background-color: rgb(247, 245, 245);
     margin-top: -400px;
-
   }
+  #filter1.push{margin-top: 40px;}
 
+  .hide{visibility: hidden;}
   #order{
-    /* for javascript */
-
-    /* end */
     position: sticky;
     position: -webkit-sticky;
     height: 70vh;
@@ -101,6 +99,8 @@
     }
     #order-head > p{margin: 10px;}
     #x-img{
+      background-color: rgb(196, 196, 196);
+      border: none;
       width: 50px;
       height: 50px;
       position: absolute;
