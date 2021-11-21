@@ -1,0 +1,30 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/user/aoe" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group">
+        <label>Food Name</label>
+        <input type="text" class="form-control" name="foodname" placeholder="Food Name" >
+    
+    </div>
+    <div class="form-group">
+        <label>Image Path</label>
+        <input type="text" class="form-control" name="imagepath" placeholder="Image Path" >
+    
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Description</label>
+            <input type="text" class="form-control" name="desc" placeholder="Description" >
+        </div>
+        <div class="form-group col-md-6">
+            <label>Price</label>
+            <input type="number" class="form-control" name="price" placeholder="Price" >
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/employee/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
