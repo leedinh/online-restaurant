@@ -49,7 +49,14 @@
   </div>
 </div>
 
-<div id="order" class="hidden">
+
+
+<div id="filter1" class="push">
+  {{# each products }}
+  <div class="row">
+    {{# each this }}
+
+  <div id="order" class="hidden">
   <div id="order-head">
     <p>ADD TO CART</p>
 
@@ -68,22 +75,22 @@
   </div>
   <div id="product-detail">
     <div id="img-detail">
-      <img src="images/Vegetable Dumplings.png">
+      <img src="{{ this.imagepath }}" alt="..." class="img-responsive">
     </div>
     <div id="detail">
       <!-- overview -->
       <div id="overview">
         <div id="order-code">
           <p>Name</p>
-          <p>401</p>
+          <p>{{ this.name }}</p>
         </div>
         <div id="order-name">
           <p>Category</p>
-          <p>Burger</p>
+          <p>{{ this.category }}</p>
         </div>
         <div id="unit-price">
           <p>Unit Price</p>
-          <strong>12.55$</strong>
+          <strong>{{ this.price }}$</strong>
         </div>
       </div>
       <!-- quantity -->
@@ -102,10 +109,15 @@
   </div>
 </div>
 
-<div id="filter1" class="push">
-  {{# each products }}
-  <div class="row">
-    {{# each this }}
+
+
+
+
+
+
+
+
+
     <div class="col-sm-6 col-md-4">
       <div class="thumbnail">
         <img src="{{ this.imagepath }}" alt="..." class="img-responsive">
@@ -118,8 +130,8 @@
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"
               integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
             <script type="text/javascript">
-              $(document).ready(function () {
-                $('#view_').click(function () {
+              $('.btn-primary').each(function () {
+                $(this).click(function () {
                   $('#order').removeClass('hidden');
                 });
               });
